@@ -13,6 +13,9 @@ commit-msg: suguotao 新增html, css, js, api 风格文件
 
 > pull --rebase  或者  fetch + rebase  能帮你做到这点
 
+- 如果你想净化你的log历史：
+> git rebase -i 或者  git commit --amend 能帮到你
+
 ##### 文档内容说明
 
 - 对于代码风格有 <b>强制</b> 和 <b>建议</b>两种
