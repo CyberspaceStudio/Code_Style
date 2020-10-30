@@ -1,0 +1,17 @@
+请注意：
+修改保命
+
+引入fastjson依赖
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+     <version>1.2.73</version>
+</dependency>
+
+
+应当在application.yml中添加如下配置
+wx:
+  appid:
+  secret:
+  templateId:
+  url: https://api.weixin.qq.com/sns/jscode2session?appid=${wx.appid}&secret=${wx.secret}&grant_type=authorization_code&js_code=
