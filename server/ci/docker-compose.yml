@@ -1,0 +1,17 @@
+version: '3'
+services:
+ course:
+  image: xdqingyuan/course-server:latest
+  restart: always
+  ports:
+    - 8080:8080
+  volumes:
+    - ./:/a-course
+  container_name: course
+ watchtower:
+  image: containrrr/watchtower
+  volumes:
+   - /var/run/docker.sock:/var/run/docker.sock
+  # 30秒检查一次更新
+  command: course  --cleanup  --interval 30
+  container_name: watchower

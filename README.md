@@ -1,27 +1,35 @@
-#### 开放文档，工作室任何人可以提交PR
+## 产品流程
 
-##### 请尽可能保证明确的commit，能明确表示距离上一次commit所做的修改最好
+### 前期准备
 
-```bash
-commit-msg: suguotao 新增html, css, js, api 风格文件
-```
-> 解释:
-> 加上姓名，方便以后维护的时候觉得不合理能可以找到相应的RD或者FE进行沟通
-> 明确的commit信息方便仓库管理员查看diff时更快确认你的修改意图
+1. 产品画出大致原型后，与前后端负责人沟通技术实现难度
 
-##### 请尽可能保证线性的commit历史，虽然这并不是必要的
+2. 产品负责人开会进行项目立项，UI前后端明确需求
 
-> pull --rebase  或者  fetch + rebase  能帮你做到这点
+3. 给产品负责人大致的工期排期。
 
-- 如果你想净化你的log历史：
-> git rebase -i 或者  git commit --amend 能帮到你
+4. 在工作室的 github 账号下建立项目的代码仓库
 
-##### 文档内容说明
+5. 前后端仓库分离，仓库名尽量统一为ProjectName-front ProjectName-app  ProjectName-server
 
-- 对于代码风格有 <b>强制</b> 和 <b>建议</b>两种
-    + 你需要严格遵守强制条目，建议条目可以作为开发时的最佳实践
-- Notice
-    + 说明该风格待商议，需根据工作室具体情况落地
+6. 产品负责人负责定期询问进度
 
+### 开发中
 
-##### 欢迎PR  有问题码上说话 >_<
+1. 前后端同学协作，进入开发状态
+
+2. 接口使用 restful API 或其他风格
+
+3. 后端把controller层以及pojo写好，要求遵循java doc(每个方法都要)注释规范，并通过smart-doc[https://github.com/smart-doc-group/smart-doc]生成api文档，将文档交给前端与前端进行沟通，沟通具体实现。
+
+4. 开发过程认真负责，及时沟通
+
+5. 有产品相关问题及时与产品负责人沟通。
+
+6. 及时提交 commit，通过项目开发熟悉 git 工作流（很重要的技能）
+
+### 部署上线
+
+部署上线采用ci流程,具体实现为Docke+Travis-ci+Github+watchower
+
+详细操作流程请见https://github.com/CyberspaceStudio/QingYuan-Infrastructure
